@@ -26,6 +26,12 @@ MainWindow::initTestUi()
     QList<QTreeWidgetItem *> prjItems;
     QStringList slFileList;
 
+    //change layout proportion
+    ui->hloMain->setStretch(0,1);
+    ui->hloMain->setStretch(1,2);
+    ui->hloMain->setStretch(2,2);
+    ui->vloPrj->setStretch(0,1);
+    ui->vloPrj->setStretch(1,2);
     //prj
     slProjectHeaders << "PrjName" << "LastModified" << "NoIdea";
     for (int i = 0; i < 5; ++i){

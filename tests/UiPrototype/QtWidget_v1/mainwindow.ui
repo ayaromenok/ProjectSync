@@ -30,17 +30,23 @@
      <item>
       <layout class="QVBoxLayout" name="vloPrj">
        <item>
-        <widget class="QTreeView" name="tvPrjTree"/>
+        <widget class="QTreeWidget" name="twPrjTree">
+         <column>
+          <property name="text">
+           <string notr="true">1</string>
+          </property>
+         </column>
+        </widget>
        </item>
        <item>
-        <widget class="QListView" name="lvPrjBranches"/>
+        <widget class="QListWidget" name="lwPrjBranches"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QVBoxLayout" name="vloGit">
        <item>
-        <widget class="QListView" name="lvFileList"/>
+        <widget class="QListWidget" name="lwFileList"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="hloGitDiff">
@@ -101,20 +107,20 @@
         </layout>
        </item>
        <item>
-        <widget class="QListView" name="lvGitLog"/>
+        <widget class="QListWidget" name="lwGitLog"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QVBoxLayout" name="vloIssues">
        <item>
-        <widget class="QListView" name="lvIssueList"/>
+        <widget class="QListWidget" name="lwIssueList"/>
        </item>
        <item>
-        <widget class="QListView" name="lvIssueBody"/>
+        <widget class="QListWidget" name="lwIssueBody"/>
        </item>
        <item>
-        <widget class="QListView" name="lvIssueComments"/>
+        <widget class="QListWidget" name="lwIssueComments"/>
        </item>
       </layout>
      </item>

@@ -18,8 +18,8 @@ private:
     QSettings               *_settings;
     QString                 _token;
     quint32                 _userId;
-    QList<quint32>          _prjects;
-    QList<QString>          _projectNames;
+    quint32                 _prjCurId;
+    QString                 _prjCurName;
 };
 
 #endif // YGITLAB_H

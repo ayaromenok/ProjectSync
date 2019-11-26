@@ -22,6 +22,8 @@ private:
     QString         _descr;
     QString         _state; //may be need to make enum/int
     QString         _createdAt; //need to convert to quint64
+    QString         _updatedAt; //need to convert to quint64
+    QString         _closedAt; //need to convert to quint64
     QString         _user;
 };
 

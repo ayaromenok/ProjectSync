@@ -18,8 +18,8 @@ void fnHelper()
                 for (int i=0; i< ja.size(); ++i){
                     YIssue issue;
                     QJsonObject jo = ja[i].toObject();
-                    //issue.parseIssue(jo);
-                    //issue.dumpToConsole();
+                    issue.parseIssue(jo);
+                    issue.dumpToConsole();
                 }
             }
         }

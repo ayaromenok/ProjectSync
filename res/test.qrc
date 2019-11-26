@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>test/branches.txt</file>
+        <file>test/commits.txt</file>
+        <file>test/issues.txt</file>
+        <file>test/issues_boards.txt</file>
+        <file>test/issues_statistic.txt</file>
+        <file>test/milestones.txt</file>
+        <file>test/projects.txt</file>
+    </qresource>
+</RCC>

@@ -12,6 +12,10 @@ class YGitLab : public QObject
 public:
     explicit YGitLab(QObject *parent = nullptr);
     ~YGitLab();
+    QString getToken(){return _token;}
+    quint32 getUserID(){return _userId;}
+    quint32 getPrjCurId() {return _prjCurId;}
+    QString getPrjCurName() {return _prjCurName;}
 signals:
 
 private:

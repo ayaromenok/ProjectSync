@@ -24,7 +24,11 @@ private:
     QString         _createdAt; //need to convert to quint64
     QString         _updatedAt; //need to convert to quint64
     QString         _closedAt; //need to convert to quint64
-    QString         _user;
+    QString         _user;      //need own holder
+    QString         _milestone; //need own holder
+    int             _timeEst;
+    int             _timeSpent;
+    int             _weight;
 };
 
 #endif // YISSUE_H

@@ -69,8 +69,8 @@
 	"due_date":"2019-11-26",
 	"confidential":false,
 	"discussion_locked":null,
-	"web_url":"https://gitlab.com/ayaromenok/testpostapi/issues/5","
-	time_stats":
+	"web_url":"https://gitlab.com/ayaromenok/testpostapi/issues/5",
+	"time_stats":
 	{
 		"time_estimate":7200,
 		"total_time_spent":10260,

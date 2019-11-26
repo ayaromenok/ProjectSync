@@ -39,6 +39,24 @@ YIssue::parseIssue(const QJsonObject &jo)
             }
         }
     }
+    if (jo.contains("milestone")){
+        QJsonObject jmlstn = jo["milestone"].toObject();
+        if (jmlstn.contains("title")){
+            _milestone = jmlstn["title"].toString();
+        }
+    }
+
+    if (jo.contains("time_stats")){
+        QJsonObject jtime = jo["time_stats"].toObject();
+        if (jtime.contains("time_estimate")){
+            _timeEst = jtime["time_estimate"].toInt();
+        }
+        if (jtime.contains("time_spent")){
+            _timeEst = jtime["time_spend"].toInt();
+        }
+    }
+
+    if (jo.contains("weight"))         { _weight = jo["weight"].toInt(); }
 
     return result;
 }
@@ -48,5 +66,6 @@ YIssue::dumpToConsole()
 {
     qInfo() << "Issue #" << _iid << _title << _state << ": " << _descr;
     qInfo() << _createdAt << _updatedAt << _closedAt << "closed" << _user;
+    qInfo() << _milestone << _timeEst << _timeSpent << _weight;
 }
 

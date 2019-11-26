@@ -1,0 +1,97 @@
+[
+{
+	"id":27580724,
+	"iid":5,"
+	project_id":15163048,
+	"title":"issueN5",
+	"description":"issue 5 description",
+	"state":"closed",
+	"created_at":"2019-11-26T14:33:48.618Z",
+	"updated_at":"2019-11-26T14:36:07.612Z",
+	"closed_at":"2019-11-26T14:36:07.567Z",
+	"closed_by":
+	{
+		"id":104820,
+		"name":"Andrey “Azazello” Yaromenok",
+		"username":"ayaromenok",
+		"state":"active",
+		"avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon",
+		"web_url":"https://gitlab.com/ayaromenok"
+	},
+	"labels":[],
+	"milestone":
+	{
+		"id":1080869,
+		"iid":1,
+		"project_id":15163048,
+		"title":"01_FirstMileStone",
+		"description":"milestone description - something very smart\r\n",
+		"state":"active",
+		"created_at":"2019-11-26T14:31:04.018Z",
+		"updated_at":"2019-11-26T14:31:04.018Z",
+		"due_date":"2019-11-27",
+		"start_date":"2019-11-26",
+		"web_url":"https://gitlab.com/ayaromenok/testpostapi/-/milestones/1"
+	},
+	"assignees":
+	[
+	{
+		"id":104820,
+		"name":"Andrey “Azazello” Yaromenok",
+		"username":"ayaromenok",
+		"state":"active",
+		"avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon",
+		"web_url":"https://gitlab.com/ayaromenok"
+	}
+	],
+	"author":
+	{
+		"id":104820,
+		"name":"Andrey “Azazello” Yaromenok",
+		"username":"ayaromenok",
+		"state":"active",
+		"avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon",
+		"web_url":"https://gitlab.com/ayaromenok"
+	},
+	"assignee":
+	{
+		"id":104820,
+		"name":"Andrey “Azazello” Yaromenok",
+		"username":"ayaromenok",
+		"state":"active",
+		"avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon",
+		"web_url":"https://gitlab.com/ayaromenok"
+	},
+	"user_notes_count":1,
+	"merge_requests_count":0,
+	"upvotes":0,
+	"downvotes":0,
+	"due_date":"2019-11-26",
+	"confidential":false,
+	"discussion_locked":null,
+	"web_url":"https://gitlab.com/ayaromenok/testpostapi/issues/5",
+	"time_stats":
+	{
+		"time_estimate":7200,
+		"total_time_spent":10260,
+		"human_time_estimate":"2h",
+		"human_total_time_spent":"2h 51m"
+	},
+	"task_completion_status":
+	{
+		"count":0,
+		"completed_count":0
+	},
+	"has_tasks":false,
+	"_links":
+	{
+		"self":"https://gitlab.com/api/v4/projects/15163048/issues/5",
+		"notes":"https://gitlab.com/api/v4/projects/15163048/issues/5/notes",
+		"award_emoji":"https://gitlab.com/api/v4/projects/15163048/issues/5/award_emoji",
+		"project":"https://gitlab.com/api/v4/projects/15163048"
+	},
+	"weight":7
+	},
+	{
+		"id":27579887,
+		"iid":4,"project_id":15163048,"title":"issueN4","description":"issue 4 description","state":"opened","created_at":"2019-11-26T14:32:49.982Z","updated_at":"2019-11-26T14:33:18.167Z","closed_at":null,"closed_by":null,"labels":["To Do"],"milestone":{"id":1080869,"iid":1,"project_id":15163048,"title":"01_FirstMileStone","description":"milestone description - something very smart\r\n","state":"active","created_at":"2019-11-26T14:31:04.018Z","updated_at":"2019-11-26T14:31:04.018Z","due_date":"2019-11-27","start_date":"2019-11-26","web_url":"https://gitlab.com/ayaromenok/testpostapi/-/milestones/1"},"assignees":[{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"}],"author":{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"},"assignee":{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"},"user_notes_count":0,"merge_requests_count":0,"upvotes":0,"downvotes":0,"due_date":"2019-11-26","confidential":false,"discussion_locked":null,"web_url":"https://gitlab.com/ayaromenok/testpostapi/issues/4","time_stats":{"time_estimate":3600,"total_time_spent":0,"human_time_estimate":"1h","human_total_time_spent":null},"task_completion_status":{"count":0,"completed_count":0},"has_tasks":false,"_links":{"self":"https://gitlab.com/api/v4/projects/15163048/issues/4","notes":"https://gitlab.com/api/v4/projects/15163048/issues/4/notes","award_emoji":"https://gitlab.com/api/v4/projects/15163048/issues/4/award_emoji","project":"https://gitlab.com/api/v4/projects/15163048"},"weight":2},{"id":27579777,"iid":3,"project_id":15163048,"title":"issueN3","description":"issue 3 description","state":"opened","created_at":"2019-11-26T14:32:08.158Z","updated_at":"2019-11-26T14:41:30.164Z","closed_at":null,"closed_by":null,"labels":["Doing"],"milestone":{"id":1080869,"iid":1,"project_id":15163048,"title":"01_FirstMileStone","description":"milestone description - something very smart\r\n","state":"active","created_at":"2019-11-26T14:31:04.018Z","updated_at":"2019-11-26T14:31:04.018Z","due_date":"2019-11-27","start_date":"2019-11-26","web_url":"https://gitlab.com/ayaromenok/testpostapi/-/milestones/1"},"assignees":[{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"}],"author":{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"},"assignee":{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"},"user_notes_count":2,"merge_requests_count":0,"upvotes":0,"downvotes":0,"due_date":"2019-11-26","confidential":false,"discussion_locked":null,"web_url":"https://gitlab.com/ayaromenok/testpostapi/issues/3","time_stats":{"time_estimate":7200,"total_time_spent":0,"human_time_estimate":"2h","human_total_time_spent":null},"task_completion_status":{"count":0,"completed_count":0},"has_tasks":false,"_links":{"self":"https://gitlab.com/api/v4/projects/15163048/issues/3","notes":"https://gitlab.com/api/v4/projects/15163048/issues/3/notes","award_emoji":"https://gitlab.com/api/v4/projects/15163048/issues/3/award_emoji","project":"https://gitlab.com/api/v4/projects/15163048"},"weight":5},{"id":27534388,"iid":2,"project_id":15163048,"title":"issue N2 - open","description":"issue text","state":"opened","created_at":"2019-11-25T11:32:33.991Z","updated_at":"2019-11-25T11:32:33.991Z","closed_at":null,"closed_by":null,"labels":[],"milestone":null,"assignees":[{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"}],"author":{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"},"assignee":{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"},"user_notes_count":0,"merge_requests_count":0,"upvotes":0,"downvotes":0,"due_date":"2019-11-30","confidential":false,"discussion_locked":null,"web_url":"https://gitlab.com/ayaromenok/testpostapi/issues/2","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"task_completion_status":{"count":0,"completed_count":0},"has_tasks":false,"_links":{"self":"https://gitlab.com/api/v4/projects/15163048/issues/2","notes":"https://gitlab.com/api/v4/projects/15163048/issues/2/notes","award_emoji":"https://gitlab.com/api/v4/projects/15163048/issues/2/award_emoji","project":"https://gitlab.com/api/v4/projects/15163048"},"weight":null},{"id":26899180,"iid":1,"project_id":15163048,"title":"issue #1 (closed)","description":"issue text","state":"closed","created_at":"2019-11-10T13:15:21.141Z","updated_at":"2019-11-25T11:31:59.331Z","closed_at":"2019-11-10T13:56:39.297Z","closed_by":{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"},"labels":[],"milestone":null,"assignees":[],"author":{"id":104820,"name":"Andrey “Azazello” Yaromenok","username":"ayaromenok","state":"active","avatar_url":"https://secure.gravatar.com/avatar/128397ed8d2ad892fe9aeeb48b6e34bb?s=80\u0026d=identicon","web_url":"https://gitlab.com/ayaromenok"},"assignee":null,"user_notes_count":3,"merge_requests_count":0,"upvotes":0,"downvotes":0,"due_date":null,"confidential":false,"discussion_locked":null,"web_url":"https://gitlab.com/ayaromenok/testpostapi/issues/1","time_stats":{"time_estimate":86400,"total_time_spent":86400,"human_time_estimate":"3d","human_total_time_spent":"3d"},"task_completion_status":{"count":0,"completed_count":0},"has_tasks":false,"_links":{"self":"https://gitlab.com/api/v4/projects/15163048/issues/1","notes":"https://gitlab.com/api/v4/projects/15163048/issues/1/notes","award_emoji":"https://gitlab.com/api/v4/projects/15163048/issues/1/award_emoji","project":"https://gitlab.com/api/v4/projects/15163048"},"weight":null}]

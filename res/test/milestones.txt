@@ -1,0 +1,15 @@
+[
+{
+	"id":1080869,
+	"iid":1,
+	"project_id":15163048,
+	"title":"01_FirstMileStone",
+	"description":"milestone description - something very smart\r\n",
+	"state":"active",
+	"created_at":"2019-11-26T14:31:04.018Z",
+	"updated_at":"2019-11-26T14:31:04.018Z",
+	"due_date":"2019-11-27",
+	"start_date":"2019-11-26",
+	"web_url":"https://gitlab.com/ayaromenok/testpostapi/-/milestones/1"
+}
+]

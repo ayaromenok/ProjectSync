@@ -48,7 +48,7 @@ private:
     int             _projectId;
     QString         _title;
     QString         _descr;
-    int              _state;
+    int             _state;
     quint64         _createdAt;
     quint64         _updatedAt;
     quint64         _closedAt;

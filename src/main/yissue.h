@@ -38,6 +38,8 @@ public:
     void setWeight(int weight){_weight = weight;}
     int getAuthorId(){return _authorId;}
     void setAuthorId(int authorId){_authorId = authorId;}
+    int getMilestoneId(){return _milestoneId;}
+    void setMilestoneId(int milestoneId){_milestoneId = milestoneId;}
 signals:
 
 private:

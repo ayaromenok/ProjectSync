@@ -9,6 +9,7 @@ SOURCES += \
         ../src/main/ygitlab.cpp \
         ../src/main/yissue.cpp \
         ../src/main/yissueparse.cpp \
+        ../src/main/ymilestone.cpp \
         ../src/main/yrequest.cpp \
         ../src/main/yuser.cpp \
         main.cpp
@@ -22,6 +23,7 @@ HEADERS += \
     ../src/main/ygitlab.h \
     ../src/main/yissue.h \
     ../src/main/yissueparse.h \
+    ../src/main/ymilestone.h \
     ../src/main/yrequest.h \
     ../src/main/yuser.h
 

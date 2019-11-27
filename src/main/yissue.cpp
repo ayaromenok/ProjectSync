@@ -65,8 +65,8 @@ YIssue::~YIssue()
 void
 YIssue::dumpToConsole()
 {
-    qInfo() << "Issue #" <<_id << _iid << _projectId << _title ;
-    //<< _state << ": " << _descr;
+    qInfo() << "Issue #" <<_id << _iid << _projectId << _title
+    << _descr << _state << _timeEst << _timeSpend << _weight;
     //qInfo() << _createdAt << _updatedAt << _closedAt << "closed" << _user;
     //qInfo() << _milestone << _timeEst << _timeSpent << _weight;
 }

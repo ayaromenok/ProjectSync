@@ -10,7 +10,7 @@ class YIssue : public QObject
 public:
     explicit YIssue(QObject *parent = nullptr);
     ~YIssue();
-   // bool parseIssue(const QJsonObject &jo);
+
     void dumpToConsole();
     int getId(){return _id;}
     void setId(int id) {_id = id;}
@@ -20,7 +20,22 @@ public:
     void setProjectId(int projectId){_projectId = projectId;}
     QString getTitle(){return _title;}
     void setTitle(QString title){_title = title;}
-
+    QString getDescr(){return _descr;}
+    void setDescr(QString descr){_descr = descr;}
+    int getState(){return _state;}
+    void setState(int state){_state = state;}
+    quint64 getCreatedAt(){return _createdAt;}
+    void setCreatedAt(quint64 createdAt){_createdAt = createdAt;}
+    quint64 getUpdatedAt(){return _updatedAt;}
+    void setUpdatedAt(quint64 updatedAt){_updatedAt = updatedAt;}
+    quint64 getClosedAt(){return _closedAt;}
+    void setClosedAt(quint64 closedAt){_closedAt = closedAt;}
+    int getTimeEst(){return _timeEst;}
+    void setTimeEst(int time){_timeEst = time;}
+    int getTimeSpend(){return _timeSpend;}
+    void setTimeSpend(int time){_timeSpend = time;}
+    int getWeight(){return _weight;}
+    void setWeight(int weight){_weight = weight;}
 signals:
 
 private:
@@ -29,14 +44,14 @@ private:
     int             _projectId;
     QString         _title;
     QString         _descr;
-    QString         _state; //may be need to make enum/int
-    QString         _createdAt; //need to convert to quint64
-    QString         _updatedAt; //need to convert to quint64
-    QString         _closedAt; //need to convert to quint64
-    QString         _user;      //need own holder - YUser
-    QString         _milestone; //need own holder - YMilesone
+    int              _state;
+    quint64         _createdAt;
+    quint64         _updatedAt;
+    quint64         _closedAt;
+    int             _userId;      //need own holder - YUser
+    int             _milestoneId; //need own holder - YMilesone
     int             _timeEst;
-    int             _timeSpent;
+    int             _timeSpend;
     int             _weight;
     //assignees - array of obj - YUser
     //author - obj - YUser

@@ -44,22 +44,22 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il, QList<YUser*> 
         if (jo.contains("weight"))       { issue->setWeight(jo["weight"].toInt()); }
 
         if (jo.contains("author")){
-            YUser* user = new YUser();
+
             QJsonObject jauthor = jo["author"].toObject();
             if (jauthor.contains("id")){
                 issue->setAuthorId(jauthor["id"].toInt());
-                user->setId(jauthor["id"].toInt());
+                bool userNotExist = true;
                 if (!ul.empty()){
-                     bool userNotExist = true;
+
                      for (int i = 0; i<ul.size(); ++i){
-                         if (ul.at(i)->getId() == user->getId()){
+                         if (ul.at(i)->getId() == issue->getAuthorId()){
                              userNotExist = false;
                          }
                      }
-                     if (userNotExist){
-                         ul.append(user);
-                     }
-                } else {
+                }
+                YUser* user = new YUser();
+                user->setId(jauthor["id"].toInt());
+                if (userNotExist){
                     ul.append(user);
                 }
             }

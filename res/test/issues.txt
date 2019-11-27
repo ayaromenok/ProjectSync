@@ -1,8 +1,8 @@
 [
 {
 	"id":27580724,
-	"iid":5,"
-	project_id":15163048,
+	"iid":5,
+	"project_id":15163048,
 	"title":"issueN5",
 	"description":"issue 5 description",
 	"state":"closed",

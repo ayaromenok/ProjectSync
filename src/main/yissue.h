@@ -10,8 +10,17 @@ class YIssue : public QObject
 public:
     explicit YIssue(QObject *parent = nullptr);
     ~YIssue();
-    bool parseIssue(const QJsonObject &jo);
+   // bool parseIssue(const QJsonObject &jo);
     void dumpToConsole();
+    int getId(){return _id;}
+    void setId(int id) {_id = id;}
+    int getIid(){return _iid;}
+    void setIid(int iid){_iid = iid;}
+    int getProjectId(){return _projectId;}
+    void setProjectId(int projectId){_projectId = projectId;}
+    QString getTitle(){return _title;}
+    void setTitle(QString title){_title = title;}
+
 signals:
 
 private:

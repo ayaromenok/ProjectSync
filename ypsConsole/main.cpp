@@ -4,10 +4,14 @@
 #include "../src/main/ygitlab.h"
 //#include "../src/main/yrequest.h"
 #include "../src/main/yissue.h"
+#include "../src/main/yissueparse.h"
 
 void fnHelper()
 {
     QFile file(":/test/issues.txt");
+    YIssueParse ip;
+    QList<YIssue*> *issueList = new QList<YIssue*>;
+
     if (file.exists()){
         qDebug() << "file: " << file.size() << "bytes";
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
@@ -15,14 +19,14 @@ void fnHelper()
             QJsonDocument jDoc = QJsonDocument::fromJson(ba);
             if (jDoc.isArray()) {
                 QJsonArray ja = jDoc.array();
-                for (int i=0; i< ja.size(); ++i){
-                    YIssue issue;
-                    QJsonObject jo = ja[i].toObject();
-                    issue.parseIssue(jo);
-                    issue.dumpToConsole();
-                }
+                ip.parseIssue(ja, *issueList);
             }
         }
+    }
+
+    for (int i = 0; i<issueList->size(); ++i){
+        //qDebug() << issueList->at(i)->objectName();
+        issueList->at(i)->dumpToConsole();
     }
 }
 

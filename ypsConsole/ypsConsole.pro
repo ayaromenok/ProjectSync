@@ -10,6 +10,7 @@ SOURCES += \
         ../src/main/yissue.cpp \
         ../src/main/yissueparse.cpp \
         ../src/main/yrequest.cpp \
+        ../src/main/yuser.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -21,7 +22,8 @@ HEADERS += \
     ../src/main/ygitlab.h \
     ../src/main/yissue.h \
     ../src/main/yissueparse.h \
-    ../src/main/yrequest.h
+    ../src/main/yrequest.h \
+    ../src/main/yuser.h
 
 RESOURCES += \
     ../res/test.qrc

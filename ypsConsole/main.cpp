@@ -7,6 +7,7 @@
 #include "../src/main/yissueparse.h"
 #include "../src/main/yissue.h"
 #include "../src/main/yuser.h"
+#include "../src/main/ymilestone.h"
 
 void fnHelper()
 {
@@ -14,6 +15,7 @@ void fnHelper()
     YIssueParse ip;
     QList<YIssue*> *issueList = new QList<YIssue*>;
     QList<YUser*>  *userList = new QList<YUser*>;
+    QList<YMilestone*>  *milestoneList = new QList<YMilestone*>;
 
     if (file.exists()){
         qDebug() << "file: " << file.size() << "bytes";
@@ -22,7 +24,7 @@ void fnHelper()
             QJsonDocument jDoc = QJsonDocument::fromJson(ba);
             if (jDoc.isArray()) {
                 QJsonArray ja = jDoc.array();
-                ip.parseIssue(ja, *issueList, *userList);
+                ip.parseIssue(ja, *issueList, *userList, *milestoneList);
             }
         }
     }
@@ -35,6 +37,11 @@ void fnHelper()
     for (int i = 0; i<userList->size(); ++i){
         qDebug() << userList->at(i)->objectName();
         userList->at(i)->dumpToConsole();
+    }
+    qDebug() << "# of milestones:" <<milestoneList->size();
+    for (int i = 0; i<milestoneList->size(); ++i){
+        qDebug() << milestoneList->at(i)->objectName();
+        milestoneList->at(i)->dumpToConsole();
     }
 }
 

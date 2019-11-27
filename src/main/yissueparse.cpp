@@ -14,7 +14,7 @@ YIssueParse::~YIssueParse()
 }
 
 bool
-YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il)
+YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il, QList<YUser*> &ul)
 {
     for (int i=0; i< ja.size(); ++i){
         YIssue* issue = new YIssue();
@@ -42,6 +42,29 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il)
             }
         }
         if (jo.contains("weight"))       { issue->setWeight(jo["weight"].toInt()); }
+
+        if (jo.contains("author")){
+            YUser* user = new YUser();
+            QJsonObject jauthor = jo["author"].toObject();
+            if (jauthor.contains("id")){
+                issue->setAuthorId(jauthor["id"].toInt());
+                user->setId(jauthor["id"].toInt());
+                if (!ul.empty()){
+                     bool userNotExist = true;
+                     for (int i = 0; i<ul.size(); ++i){
+                         if (ul.at(i)->getId() == user->getId()){
+                             userNotExist = false;
+                         }
+                     }
+                     if (userNotExist){
+                         ul.append(user);
+                     }
+                } else {
+                    ul.append(user);
+                }
+            }
+
+        }
 
         il.append(issue);
     }

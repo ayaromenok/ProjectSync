@@ -4,6 +4,7 @@
 
 #include <QObject>
 #include "yissue.h"
+#include "yuser.h"
 
 class YIssueParse : public QObject
 {
@@ -11,7 +12,9 @@ class YIssueParse : public QObject
 public:
     explicit YIssueParse(QObject *parent = nullptr);
     ~YIssueParse();
-    bool parseIssue(const QJsonArray &ja, QList<YIssue*> &il);
+    bool parseIssue(const QJsonArray &ja,
+                    QList<YIssue*> &il,
+                    QList<YUser*> &ul);
 signals:
 
 };

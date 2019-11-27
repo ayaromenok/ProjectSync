@@ -3,14 +3,17 @@
 
 #include "../src/main/ygitlab.h"
 //#include "../src/main/yrequest.h"
-#include "../src/main/yissue.h"
+
 #include "../src/main/yissueparse.h"
+#include "../src/main/yissue.h"
+#include "../src/main/yuser.h"
 
 void fnHelper()
 {
     QFile file(":/test/issues.txt");
     YIssueParse ip;
     QList<YIssue*> *issueList = new QList<YIssue*>;
+    QList<YUser*>  *userList = new QList<YUser*>;
 
     if (file.exists()){
         qDebug() << "file: " << file.size() << "bytes";
@@ -19,7 +22,7 @@ void fnHelper()
             QJsonDocument jDoc = QJsonDocument::fromJson(ba);
             if (jDoc.isArray()) {
                 QJsonArray ja = jDoc.array();
-                ip.parseIssue(ja, *issueList);
+                ip.parseIssue(ja, *issueList, *userList);
             }
         }
     }
@@ -27,6 +30,11 @@ void fnHelper()
     for (int i = 0; i<issueList->size(); ++i){
         //qDebug() << issueList->at(i)->objectName();
         issueList->at(i)->dumpToConsole();
+    }
+    qDebug() << "# of users:" <<userList->size();
+    for (int i = 0; i<userList->size(); ++i){
+        qDebug() << userList->at(i)->objectName();
+        userList->at(i)->dumpToConsole();
     }
 }
 

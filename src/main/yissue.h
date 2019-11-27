@@ -36,6 +36,8 @@ public:
     void setTimeSpend(int time){_timeSpend = time;}
     int getWeight(){return _weight;}
     void setWeight(int weight){_weight = weight;}
+    int getAuthorId(){return _authorId;}
+    void setAuthorId(int authorId){_authorId = authorId;}
 signals:
 
 private:
@@ -54,7 +56,7 @@ private:
     int             _timeSpend;
     int             _weight;
     //assignees - array of obj - YUser
-    //author - obj - YUser
+    int             _authorId;// - obj - YUser
     //assignee - obj - YUser
     //up/down votes - int
     //web_url - str

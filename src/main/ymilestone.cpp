@@ -28,6 +28,6 @@ YMilestone::~YMilestone()
 void
 YMilestone::dumpToConsole()
 {
-    qDebug() << "milestone" << _id << _iid;
-
+    qDebug() << "milestone" << _id << _title << _iid << _projectId << _state
+              << "\n" << _descr << "\n" << _webUrl;
 }

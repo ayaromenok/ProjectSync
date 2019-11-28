@@ -13,6 +13,18 @@ public:
     void dumpToConsole();
     int getId(){return _id;}
     void setId(int id){_id = id;}
+    int getIid(){return _iid;}
+    void setIid(int iid){_iid = iid;}
+    int getProjectId(){return _projectId;}
+    void setProjectId(int id){_projectId = id;}
+    int getState(){return _state;}
+    void setState(int state){_state = state;}
+    QString getTitle(){return _title;}
+    void setTitle(QString title){_title = title;}
+    QString getDescr(){return _descr;}
+    void setDescr(QString descr){_descr = descr;}
+    QString getWebUrl(){return _webUrl;}
+    void setWebUrl(QString webUrl){_webUrl = webUrl;}
 
 signals:
 

@@ -30,9 +30,9 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il,
         if (jo.contains("title"))      { issue->setTitle(jo["title"].toString()); }
         if (jo.contains("description")){ issue->setDescr(jo["description"].toString()); }
         if (jo.contains("state"))      { issue->setState(jo["state"].toString().contains("open")?1:0); }
-//        if (jo.contains("created_at")) { issue->setCreatedAt(jo["created_at"].toString()); }
-//        if (jo.contains("updated_at")) { issue->setUpdatedAt(jo["updated_at"].toString()); }
-//        if (jo.contains("closed_at"))  { issue->setClosedAt(jo["closed_at"].toString()); }
+        if (jo.contains("created_at")) { issue->setCreatedAt(YUtils::timeStrToInt64(jo["created_at"].toString())); }
+        if (jo.contains("updated_at")) { issue->setUpdatedAt(YUtils::timeStrToInt64(jo["updated_at"].toString())); }
+        if (jo.contains("closed_at"))  { issue->setClosedAt(YUtils::timeStrToInt64(jo["closed_at"].toString())); }
 
         if (jo.contains("time_stats")){
             QJsonObject jtime = jo["time_stats"].toObject();

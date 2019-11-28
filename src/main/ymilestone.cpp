@@ -29,5 +29,6 @@ void
 YMilestone::dumpToConsole()
 {
     qDebug() << "milestone" << _id << _title << _iid << _projectId << _state
+             << _createdAt << _updatedAt << _startDate << _dueDate
               << "\n" << _descr << "\n" << _webUrl;
 }

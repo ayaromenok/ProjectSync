@@ -25,6 +25,15 @@ public:
     void setDescr(QString descr){_descr = descr;}
     QString getWebUrl(){return _webUrl;}
     void setWebUrl(QString webUrl){_webUrl = webUrl;}
+    qint64 getCreatedAt(){return _createdAt;}
+    void setCreatedAt(qint64 createdAt){_createdAt = createdAt;}
+    qint64 getUpdatedAt(){return _updatedAt;}
+    void setUpdatedAt(qint64 updatedAt){_updatedAt = updatedAt;}
+    qint64 getDueDate(){return _dueDate;}
+    void setDueDate(qint64 dueDate){_dueDate = dueDate;}
+    qint64 getStartDate(){return _startDate;}
+    void setStartDate(qint64 startDate){_startDate = startDate;}
+
 
 signals:
 

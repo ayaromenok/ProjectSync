@@ -12,6 +12,7 @@ SOURCES += \
         ../src/main/ymilestone.cpp \
         ../src/main/yrequest.cpp \
         ../src/main/yuser.cpp \
+        ../src/utils/yutils.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -25,7 +26,8 @@ HEADERS += \
     ../src/main/yissueparse.h \
     ../src/main/ymilestone.h \
     ../src/main/yrequest.h \
-    ../src/main/yuser.h
+    ../src/main/yuser.h \
+    ../src/utils/yutils.h
 
 RESOURCES += \
     ../res/test.qrc

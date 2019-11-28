@@ -1,6 +1,7 @@
 //Copyrigth (C) 2019 Andrey Yaromenok
 #include "yissueparse.h"
 #include "yissue.h"
+#include "../utils/yutils.h"
 #include <QtCore>
 
 YIssueParse::YIssueParse(QObject *parent) : QObject(parent)
@@ -90,6 +91,10 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il,
                     if (jml.contains("title")){milestone->setTitle(jml["title"].toString());}
                     if (jml.contains("description")){milestone->setDescr(jml["description"].toString());}
                     if (jml.contains("web_url")){milestone->setWebUrl(jml["web_url"].toString());}
+                    if (jml.contains("created_at")){YUtils::timeStrToInt64(jml["created_at"].toString());}
+                    if (jml.contains("updated_at")){YUtils::timeStrToInt64(jml["updated_at"].toString());}
+                    if (jml.contains("due_date")){YUtils::dateStrToInt64(jml["due_date"].toString());}
+                    if (jml.contains("start_date")){YUtils::dateStrToInt64(jml["start_date"].toString());}
                     ml.append(milestone);
                 }
             }

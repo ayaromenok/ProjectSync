@@ -84,6 +84,12 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il,
                 if (mlNotExist){
                     YMilestone* milestone = new YMilestone();
                     milestone->setId(jml["id"].toInt());
+                    if (jml.contains("iid")){milestone->setIid(jml["iid"].toInt());}
+                    if (jml.contains("project_id")){milestone->setProjectId(jml["project_id"].toInt());}
+                    if (jml.contains("state")){milestone->setState(jml["state"].toString()=="active"?1:0);}
+                    if (jml.contains("title")){milestone->setTitle(jml["title"].toString());}
+                    if (jml.contains("description")){milestone->setDescr(jml["description"].toString());}
+                    if (jml.contains("web_url")){milestone->setWebUrl(jml["web_url"].toString());}
                     ml.append(milestone);
                 }
             }

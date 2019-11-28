@@ -17,7 +17,8 @@ YIssue::YIssue(QObject *parent) : QObject(parent),
     _timeEst(0),
     _timeSpend(0),
     _weight(0),
-    _authorId(0)
+    _authorId(0),
+    _labels("")
 {
 }
 
@@ -31,6 +32,7 @@ YIssue::dumpToConsole()
 {
     qInfo() << "Issue #" <<_id << _iid << _projectId << _title
     << _descr << _state << _timeEst << _timeSpend << _weight
-    << _createdAt << _updatedAt << _closedAt  << _authorId << _milestoneId;
+    << _createdAt << _updatedAt << _closedAt  << _authorId << _milestoneId
+    << _labels;
 }
 

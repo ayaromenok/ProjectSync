@@ -40,6 +40,8 @@ public:
     void setAuthorId(int authorId){_authorId = authorId;}
     int getMilestoneId(){return _milestoneId;}
     void setMilestoneId(int milestoneId){_milestoneId = milestoneId;}
+    QStringList getLabels(){return _labels;}
+    void setLabels(QStringList labels){_labels = labels;}
 
 signals:
 
@@ -60,6 +62,7 @@ private:
     int             _weight;
     //assignees - array of obj - YUser
     int             _authorId;// - obj - YUser
+    QStringList     _labels;
     //assignee - obj - YUser
     //up/down votes - int
     //web_url - str

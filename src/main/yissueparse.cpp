@@ -33,6 +33,18 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il,
         if (jo.contains("created_at")) { issue->setCreatedAt(YUtils::timeStrToInt64(jo["created_at"].toString())); }
         if (jo.contains("updated_at")) { issue->setUpdatedAt(YUtils::timeStrToInt64(jo["updated_at"].toString())); }
         if (jo.contains("closed_at"))  { issue->setClosedAt(YUtils::timeStrToInt64(jo["closed_at"].toString())); }
+        if (jo.contains("weight"))     { issue->setWeight(jo["weight"].toInt()); }
+
+        if (jo.contains("labels")){
+            QJsonArray al = jo["labels"].toArray();
+            if (!al.empty()){
+                QStringList labels;
+                for (int i=0; i< al.size(); ++i){
+                    labels.append(al.at(i).toString());
+                }
+                issue->setLabels(labels);
+            }
+        }
 
         if (jo.contains("time_stats")){
             QJsonObject jtime = jo["time_stats"].toObject();
@@ -43,7 +55,6 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il,
                 issue->setTimeSpend(jtime["time_spend"].toInt());
             }
         }
-        if (jo.contains("weight"))       { issue->setWeight(jo["weight"].toInt()); }
 
         if (jo.contains("author")){
             QJsonObject jauthor = jo["author"].toObject();

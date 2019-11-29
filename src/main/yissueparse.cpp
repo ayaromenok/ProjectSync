@@ -95,17 +95,7 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il,
                 }
                 if (mlNotExist){
                     YMilestone* milestone = new YMilestone();
-                    milestone->setId(jml["id"].toInt());
-                    if (jml.contains("iid")){milestone->setIid(jml["iid"].toInt());}
-                    if (jml.contains("project_id")){milestone->setProjectId(jml["project_id"].toInt());}
-                    if (jml.contains("state")){milestone->setState(jml["state"].toString()=="active"?1:0);}
-                    if (jml.contains("title")){milestone->setTitle(jml["title"].toString());}
-                    if (jml.contains("description")){milestone->setDescr(jml["description"].toString());}
-                    if (jml.contains("web_url")){milestone->setWebUrl(jml["web_url"].toString());}
-                    if (jml.contains("created_at")){milestone->setCreatedAt(YUtils::timeStrToInt64(jml["created_at"].toString()));}
-                    if (jml.contains("updated_at")){milestone->setUpdatedAt(YUtils::timeStrToInt64(jml["updated_at"].toString()));}
-                    if (jml.contains("due_date")){milestone->setDueDate(YUtils::dateStrToInt64(jml["due_date"].toString()));}
-                    if (jml.contains("start_date")){milestone->setStartDate(YUtils::dateStrToInt64(jml["start_date"].toString()));}
+                    milestone->parse(jml);
                     ml.append(milestone);
                 }
             }

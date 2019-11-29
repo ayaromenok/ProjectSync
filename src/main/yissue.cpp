@@ -62,6 +62,18 @@ YIssue::parse(const QJsonObject &jo)
         }
     }
 
+    if (jo.contains("milestone")){
+        QJsonObject jml = jo["milestone"].toObject();
+        if (jml.contains("id")){
+            _milestoneId = jml["id"].toInt();
+        }
+    }
+    if (jo.contains("author")){
+        QJsonObject jauthor = jo["author"].toObject();
+        if (jauthor.contains("id")){
+            _authorId = jauthor["id"].toInt();
+        }
+    }
 }
 void
 YIssue::dumpToConsole()

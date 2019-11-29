@@ -22,9 +22,11 @@ void fnHelper()
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
             QByteArray ba = file.readAll();
             QJsonDocument jDoc = QJsonDocument::fromJson(ba);
-            if (jDoc.isArray()) {
-                QJsonArray ja = jDoc.array();
-                ip.parseIssue(ja, *issueList, *userList, *milestoneList);
+            if (!jDoc.isNull()){
+                if (jDoc.isArray()) {
+                    QJsonArray ja = jDoc.array();
+                    ip.parseIssue(ja, *issueList, *userList, *milestoneList);
+                }
             }
         }
     }

@@ -7,5 +7,6 @@
         <file>test/issues_statistic.txt</file>
         <file>test/milestones.txt</file>
         <file>test/projects.txt</file>
+        <file>test/issue_1_notes.txt</file>
     </qresource>
 </RCC>

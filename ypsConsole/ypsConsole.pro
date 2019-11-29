@@ -10,6 +10,7 @@ SOURCES += \
         ../src/main/yissue.cpp \
         ../src/main/yissueparse.cpp \
         ../src/main/ymilestone.cpp \
+        ../src/main/ynotes.cpp \
         ../src/main/yrequest.cpp \
         ../src/main/yuser.cpp \
         ../src/utils/yutils.cpp \
@@ -25,6 +26,7 @@ HEADERS += \
     ../src/main/yissue.h \
     ../src/main/yissueparse.h \
     ../src/main/ymilestone.h \
+    ../src/main/ynotes.h \
     ../src/main/yrequest.h \
     ../src/main/yuser.h \
     ../src/utils/yutils.h

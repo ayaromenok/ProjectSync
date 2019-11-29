@@ -30,6 +30,7 @@ void
 YMilestone::parse(QJsonObject &jo)
 {
     _id = jo["id"].toInt();
+    setObjectName(QString::number(jo["id"].toInt()));
     if (jo.contains("iid")){_iid = jo["iid"].toInt();}
     if (jo.contains("project_id")){_projectId= jo["project_id"].toInt();}
     if (jo.contains("state")){_state = jo["state"].toString()=="active"?1:0;}

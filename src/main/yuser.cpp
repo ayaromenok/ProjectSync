@@ -20,7 +20,7 @@ YUser::~YUser()
 }
 
 void
-YUser::parse(QJsonObject &jo)
+YUser::parse(const QJsonObject &jo)
 {
     _id = jo["id"].toInt();
     setObjectName(QString::number(jo["id"].toInt()));

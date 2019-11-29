@@ -23,6 +23,7 @@ void
 YUser::parse(QJsonObject &jo)
 {
     _id = jo["id"].toInt();
+    setObjectName(QString::number(jo["id"].toInt()));
     if (jo.contains("name")){_name = jo["name"].toString();}
     if (jo.contains("username")){_username = jo["username"].toString();}
     if (jo.contains("state")){_state = jo["state"].toString()=="active"?1:0;}

@@ -70,12 +70,7 @@ YIssueParse::parseIssue(const QJsonArray &ja, QList<YIssue*> &il,
                 }
                 if (userNotExist){
                     YUser* user = new YUser();
-                    user->setId(jauthor["id"].toInt());
-                    if (jauthor.contains("name")){user->setName(jauthor["name"].toString());}
-                    if (jauthor.contains("username")){user->setUserName(jauthor["username"].toString());}
-                    if (jauthor.contains("state")){user->setState(jauthor["state"].toString()=="active"?1:0);}
-                    if (jauthor.contains("avatar_url")){user->setAvatarUrl(jauthor["avatar_url"].toString());}
-                    if (jauthor.contains("web_url")){user->setWebUrl(jauthor["web_url"].toString());}
+                    user->parse(jauthor);
                     ul.append(user);
                 }
             }

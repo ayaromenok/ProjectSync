@@ -10,6 +10,7 @@ class YUser : public QObject
 public:
     explicit YUser(QObject *parent = nullptr);
     ~YUser();
+    void parse(QJsonObject &jo);
     void dumpToConsole();
     int getId(){return _id;}
     void setId(int id){_id = id;}

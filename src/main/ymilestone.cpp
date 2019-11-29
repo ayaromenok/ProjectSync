@@ -27,7 +27,7 @@ YMilestone::~YMilestone()
 }
 
 void
-YMilestone::parse(QJsonObject &jo)
+YMilestone::parse(const QJsonObject &jo)
 {
     _id = jo["id"].toInt();
     setObjectName(QString::number(jo["id"].toInt()));

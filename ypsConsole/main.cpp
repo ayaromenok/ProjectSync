@@ -8,6 +8,7 @@
 #include "../src/main/yissue.h"
 #include "../src/main/yuser.h"
 #include "../src/main/ymilestone.h"
+#include "../src/main/ynotes.h"
 
 void fnHelper()
 {
@@ -22,9 +23,11 @@ void fnHelper()
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
             QByteArray ba = file.readAll();
             QJsonDocument jDoc = QJsonDocument::fromJson(ba);
-            if (jDoc.isArray()) {
-                QJsonArray ja = jDoc.array();
-                ip.parseIssue(ja, *issueList, *userList, *milestoneList);
+            if (!jDoc.isNull()){
+                if (jDoc.isArray()) {
+                    QJsonArray ja = jDoc.array();
+                    ip.parseIssue(ja, *issueList, *userList, *milestoneList);
+                }
             }
         }
     }
@@ -45,6 +48,35 @@ void fnHelper()
     }
 }
 
+void fnNotesHalper()
+{
+    QFile file(":/test/issue_1_notes.txt");
+    QList<YNotes*> *notesList = new QList<YNotes*>;
+    if (file.exists()){
+        qDebug() << "file: " << file.size() << "bytes";
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+            QByteArray ba = file.readAll();
+            QJsonDocument jDoc = QJsonDocument::fromJson(ba);
+            if (!jDoc.isNull()){
+                if (jDoc.isArray()) {
+                    QJsonArray ja = jDoc.array();
+                     for (int i=0; i< ja.size(); ++i){
+                          QJsonObject jo = ja[i].toObject();
+                          YNotes* notes = new YNotes();
+                          notes->parse(jo);
+                          notesList->append(notes);
+                     }
+                }
+            }
+        }
+    }
+    qDebug() << "# of notes:" <<notesList->size();
+    for (int i = 0; i<notesList->size(); ++i){
+        qDebug() << notesList->at(i)->objectName();
+        notesList->at(i)->dumpToConsole();
+    }
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -56,6 +88,7 @@ int main(int argc, char *argv[])
     qInfo() << QCoreApplication::applicationName();
     YGitLab gl;
     fnHelper();
+    //fnNotesHalper(); //ok
 
     return a.exec();
 }

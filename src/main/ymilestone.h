@@ -10,6 +10,7 @@ class YMilestone : public QObject
 public:
     explicit YMilestone(QObject *parent = nullptr);
     ~YMilestone();
+    void parse(const QJsonObject &jo);
     void dumpToConsole();
     int getId(){return _id;}
     void setId(int id){_id = id;}

@@ -3,6 +3,8 @@
 #define YMAINTESTWINDOW_H
 
 #include <QMainWindow>
+class QTabWidget;
+class QVBoxLayout;
 
 class YMainTestWindow : public QMainWindow
 {
@@ -11,5 +13,10 @@ class YMainTestWindow : public QMainWindow
 public:
     YMainTestWindow(QWidget *parent = nullptr);
     ~YMainTestWindow();
+    void addTab(QWidget *w);
+
+private:
+    QTabWidget      *_cw;
+
 };
 #endif // MAINWINDOW_H

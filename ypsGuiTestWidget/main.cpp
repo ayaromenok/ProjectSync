@@ -3,6 +3,7 @@
 
 #include <QtCore>
 #include <QApplication>
+#include <QLabel>
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +14,9 @@ int main(int argc, char *argv[])
 
     qInfo() << QCoreApplication::applicationName();
     YMainTestWindow w;
+    QLabel *l1 = new QLabel("label 1");
+    l1->setObjectName("lb1");
+    w.addTab(l1);
     w.show();
     return a.exec();
 }

@@ -1,6 +1,8 @@
 //Copyrigth (C) 2019 Andrey Yaromenok
-#include "../src/test/ymaintestwindow.h"
 #include "../src/main/yproject.h"
+
+#include "../src/test/ymaintestwindow.h"
+#include "../src/test/yissuelistw.h"
 
 #include <QtCore>
 #include <QApplication>
@@ -20,6 +22,8 @@ int main(int argc, char *argv[])
     QLabel *l1 = new QLabel("label 1");
     l1->setObjectName("lb1");
     w.addTab(l1);
+    YIssueListW *il = new YIssueListW();
+    w.addTab(il);
     w.show();
     return a.exec();
 }

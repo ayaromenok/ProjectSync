@@ -1,5 +1,6 @@
 //Copyrigth (C) 2019 Andrey Yaromenok
 #include "../src/test/ymaintestwindow.h"
+#include "../src/main/yproject.h"
 
 #include <QtCore>
 #include <QApplication>
@@ -13,6 +14,8 @@ int main(int argc, char *argv[])
     QCoreApplication::setApplicationName("YaProjectSync");
 
     qInfo() << QCoreApplication::applicationName();
+    YProject prj;
+
     YMainTestWindow w;
     QLabel *l1 = new QLabel("label 1");
     l1->setObjectName("lb1");

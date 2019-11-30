@@ -8,7 +8,7 @@ YIssueListW::YIssueListW(QWidget *parent) : QWidget(parent)
 
 }
 
-YIssueListW::YIssueListW()
+YIssueListW::~YIssueListW()
 {
 
 }

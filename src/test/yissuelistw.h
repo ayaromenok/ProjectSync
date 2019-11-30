@@ -9,6 +9,7 @@ class YIssueListW : public QWidget
     Q_OBJECT
 public:
     explicit YIssueListW(QWidget *parent = nullptr);
+    ~YIssueListW();
 
 signals:
 

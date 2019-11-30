@@ -75,15 +75,88 @@ YTestData::loadUsers(QList<YUser*> *ul)
 bool
 YTestData::loadMilestones(QList<YMilestone*> *ml)
 {
-    return true;
+    bool result = false;
+    QFile file(":/test/milestones.txt");
+    if (file.exists()){
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+            QByteArray ba = file.readAll();
+            if (ba.length() > 0){
+                QJsonDocument jDoc = QJsonDocument::fromJson(ba);
+                if (!jDoc.isNull()){
+                    if (jDoc.isArray()) {
+                        QJsonArray ja = jDoc.array();
+                        for (int i=0; i< ja.size(); ++i){
+                             QJsonObject jo = ja[i].toObject();
+                             YMilestone* milestone = new YMilestone();
+                             milestone->parse(jo);
+                             ml->append(milestone);
+                        }
+                    }
+                    if (ml->length() > 0){
+                        result = true;
+                    }
+                }
+            }
+        }
+    }
+    return result;
 }
 bool
 YTestData::loadIssues(QList<YIssue*> *il)
 {
-    return true;
+    bool result = false;
+    QFile file(":/test/issues.txt");
+    if (file.exists()){
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+            QByteArray ba = file.readAll();
+            if (ba.length() > 0){
+                QJsonDocument jDoc = QJsonDocument::fromJson(ba);
+                if (!jDoc.isNull()){
+                    if (jDoc.isArray()) {
+                        QJsonArray ja = jDoc.array();
+                        for (int i=0; i< ja.size(); ++i){
+                             QJsonObject jo = ja[i].toObject();
+                             YIssue* issue = new YIssue();
+                             issue->parse(jo);
+                             il->append(issue);
+                        }
+                    }
+                    if (il->length() > 0){
+                        result = true;
+                    }
+                }
+            }
+        }
+    }
+    return result;
 }
 bool
 YTestData::loadNotes(QList<YNotes*> *nl)
 {
-    return true;
+    bool result = false;
+    //! \todo - add other issues
+    QFile file(":/test/issue_1_notes.txt");
+    if (file.exists()){
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+            QByteArray ba = file.readAll();
+            if (ba.length() > 0){
+                QJsonDocument jDoc = QJsonDocument::fromJson(ba);
+                if (!jDoc.isNull()){
+                    if (jDoc.isArray()) {
+                        QJsonArray ja = jDoc.array();
+                        for (int i=0; i< ja.size(); ++i){
+                            QJsonObject jo = ja[i].toObject();
+                            YNotes* notes = new YNotes();
+                            notes->parse(jo);
+                            nl->append(notes);
+                        }
+                    }
+                    if (nl->length() > 0){
+                        result = true;
+                    }
+                }
+            }
+        }
+    }
+    return result;
 }

@@ -16,11 +16,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    ../src/test/ymaintestwindow.cpp
+ #   ../src/main/yproject.cpp \
+    ../src/test/yissuelistw.cpp \    
+    ../src/test/ymaintestwindow.cpp \
+    main.cpp
 
 HEADERS += \
-    ../src/test/ymaintestwindow.h
+#    ../src/main/yproject.h \
+    ../src/test/yissuelistw.h \
+   ../src/test/ymaintestwindow.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

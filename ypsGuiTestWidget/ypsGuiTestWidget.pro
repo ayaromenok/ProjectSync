@@ -16,17 +16,32 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../src/main/yissue.cpp \
+    ../src/main/ymilestone.cpp \
+    ../src/main/ynotes.cpp \
    ../src/main/yproject.cpp \
-    ../src/test/yissuelistw.cpp \    
+    ../src/main/yuser.cpp \
+    ../src/test/yissuelistw.cpp \
+    ../src/test/ytestdata.cpp \
     ../src/test/ymaintestwindow.cpp \
+    ../src/utils/yutils.cpp \
     main.cpp
 
 HEADERS += \
+    ../src/main/yissue.h \
+    ../src/main/ymilestone.h \
+    ../src/main/ynotes.h \
    ../src/main/yproject.h \
+    ../src/main/yuser.h \
     ../src/test/yissuelistw.h \
-   ../src/test/ymaintestwindow.h
+   ../src/test/ymaintestwindow.h \
+    ../src/test/ytestdata.h \
+    ../src/utils/yutils.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    ../res/test.qrc

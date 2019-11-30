@@ -8,5 +8,16 @@
         <file>test/milestones.txt</file>
         <file>test/projects.txt</file>
         <file>test/issue_1_notes.txt</file>
+        <file>test/issue_2_notes.txt</file>
+        <file>test/issue_3_notes.txt</file>
+        <file>test/issue_4_notes.txt</file>
+        <file>test/issue_5_notes.txt</file>
+        <file>test/issue_6_notes.txt</file>
+        <file>test/issue_7_notes.txt</file>
+        <file>test/issue_8_notes.txt</file>
+        <file>test/issue_9_notes.txt</file>
+        <file>test/labels.txt</file>
+        <file>test/members.txt</file>
+        <file>test/tags.txt</file>
     </qresource>
 </RCC>

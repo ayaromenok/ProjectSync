@@ -1,11 +1,1 @@
-{
-    "statistics":
-    {
-		"counts":
-        {
-			"all":5,
-			"closed":2,
-			"opened":3
-		}
-	}
-}
+{"statistics":{"counts":{"all":9,"closed":6,"opened":3}}}

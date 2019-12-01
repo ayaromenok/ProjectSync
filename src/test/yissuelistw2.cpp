@@ -116,7 +116,7 @@ YIssueListW2::mouseMoveEvent(QMouseEvent *event)
     drag->setPixmap(pixmap);
     drag->setHotSpot(hotSpot);
 
-    Qt::DropAction dropAction = drag->exec(Qt::CopyAction | Qt::MoveAction, Qt::CopyAction);
+    Qt::DropAction dropAction = drag->exec( Qt::MoveAction, Qt::CopyAction);
 
     if (dropAction == Qt::MoveAction)
         child->close();

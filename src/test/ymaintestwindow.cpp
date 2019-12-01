@@ -20,3 +20,15 @@ YMainTestWindow::addTab(QWidget *w)
 {
     _cw->addTab(w, w->objectName());
 }
+
+void
+YMainTestWindow::addDualTab(QWidget *w1, QWidget *w2)
+{
+    QFrame *fr = new QFrame(this);
+    fr->setObjectName("Dual Tab");
+    QHBoxLayout *hl = new QHBoxLayout;
+    hl->addWidget(w1);
+    hl->addWidget(w2);
+    fr->setLayout(hl);
+    _cw->addTab(fr,fr->objectName());
+}

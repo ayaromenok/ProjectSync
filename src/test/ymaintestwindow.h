@@ -14,6 +14,7 @@ public:
     YMainTestWindow(QWidget *parent = nullptr);
     ~YMainTestWindow();
     void addTab(QWidget *w);
+    void addDualTab(QWidget *w1, QWidget *w2);
 
 private:
     QTabWidget      *_cw;

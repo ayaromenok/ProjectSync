@@ -27,15 +27,7 @@ YIssueListW2::YIssueListW2(QWidget *parent) : QWidget(parent)
     lb1->show();
     lb2->show();
     lb3->show();
-/*    QHBoxLayout *hl = new QHBoxLayout();
-    QGroupBox *gb1 = new QGroupBox("GB 1",this);
-    gb1->setFlat(false);
-    QGroupBox *gb2 = new QGroupBox("GB 2",this);
-    QGroupBox *gb3 = new QGroupBox("GB 3",this);
-    hl->addWidget(gb1);
-    hl->addWidget(gb2);
-    hl->addWidget(gb3);
-    setLayout(hl)*/;
+
     setAcceptDrops(true);
 }
 

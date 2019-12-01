@@ -27,7 +27,13 @@ YMainTestWindow::addDualTab(QWidget *w1, QWidget *w2)
     QFrame *fr = new QFrame(this);
     fr->setObjectName("Dual Tab");
     QHBoxLayout *hl = new QHBoxLayout;
-    hl->addWidget(w1);
+    QGroupBox *gb1 = new QGroupBox("Group Box #1");
+    gb1->setStyleSheet("background-color:darkgrey");
+    gb1->setFlat(false);
+    QVBoxLayout *gbl1  = new QVBoxLayout;
+    gbl1->addWidget(w1);
+    gb1->setLayout(gbl1);
+    hl->addWidget(gb1);
     hl->addWidget(w2);
     fr->setLayout(hl);
     _cw->addTab(fr,fr->objectName());

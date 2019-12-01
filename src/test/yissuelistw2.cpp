@@ -82,6 +82,7 @@ YIssueListW2::dropEvent(QDropEvent *event)
         if (!widget->isVisible())
             widget->deleteLater();
     }
+    qInfo() << "drop:" << event->pos();
 }
 
 void

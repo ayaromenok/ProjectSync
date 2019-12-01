@@ -20,11 +20,14 @@ int main(int argc, char *argv[])
     YProject prj;
 
     YMainTestWindow w;
-    YIssueListW *il = new YIssueListW();
-    w.addTab(il);
+
     YIssueListW2 *il1 = new YIssueListW2();
     YIssueListW2 *il2 = new YIssueListW2();
     w.addDualTab(il1,il2);
+
+    YIssueListW *il = new YIssueListW();
+    w.addTab(il);
+
     w.show();
     return a.exec();
 }

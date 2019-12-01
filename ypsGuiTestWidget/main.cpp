@@ -3,6 +3,7 @@
 
 #include "../src/test/ymaintestwindow.h"
 #include "../src/test/yissuelistw.h"
+#include "../src/test/yissuelistw2.h"
 
 #include <QtCore>
 #include <QApplication>
@@ -19,11 +20,10 @@ int main(int argc, char *argv[])
     YProject prj;
 
     YMainTestWindow w;
-    QLabel *l1 = new QLabel("label 1");
-    l1->setObjectName("lb1");
-    w.addTab(l1);
     YIssueListW *il = new YIssueListW();
     w.addTab(il);
+    YIssueListW2 *il2 = new YIssueListW2();
+    w.addTab(il2);
     w.show();
     return a.exec();
 }

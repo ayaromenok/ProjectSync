@@ -22,6 +22,7 @@ SOURCES += \
    ../src/main/yproject.cpp \
     ../src/main/yuser.cpp \
     ../src/test/yissuelistw.cpp \
+    ../src/test/yissuelistw2.cpp \
     ../src/test/ytestdata.cpp \
     ../src/test/ymaintestwindow.cpp \
     ../src/utils/yutils.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
    ../src/main/yproject.h \
     ../src/main/yuser.h \
     ../src/test/yissuelistw.h \
+    ../src/test/yissuelistw2.h \
    ../src/test/ymaintestwindow.h \
     ../src/test/ytestdata.h \
     ../src/utils/yutils.h

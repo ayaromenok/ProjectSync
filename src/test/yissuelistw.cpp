@@ -13,6 +13,10 @@ YIssueListW::YIssueListW(QWidget *parent) : QWidget(parent)
     vl->addWidget(lb1);
     vl->addWidget(lb2);
     vl->addWidget(lb3);
+    QListWidget *ilw = new QListWidget();
+    new QListWidgetItem("item #1", ilw);
+    new QListWidgetItem("item #2", ilw);
+    vl->addWidget(ilw);
     setLayout(vl);
 }
 

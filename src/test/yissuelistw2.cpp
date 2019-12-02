@@ -2,6 +2,7 @@
 #include <QtWidgets>
 
 #include "yissuelistw2.h"
+#include "yissuewidget.h"
 // based on Qt example widgets/dragndrop/draggabletext
 // need to update with respect to fridgeagnets (custom label)
 // or dragwidget with icons
@@ -15,19 +16,36 @@ static QLabel *createDragLabel(const QString &text, QWidget *parent)
     return label;
 }
 
+static YIssueWidget *createDragWidget(QWidget *parent)
+{
+    YIssueWidget *label = new YIssueWidget( 0, parent);
+    label->setAutoFillBackground(true);
+    //label->setFrameShape(QFrame::Panel);
+    //label->setFrameShadow(QFrame::Raised);
+    return label;
+}
+
 YIssueListW2::YIssueListW2(QWidget *parent) : QWidget(parent)
 {
     setObjectName("Issue List/Widgets #2");
-    QLabel *lb1 = createDragLabel("label 1", this);
+//    QLabel *lb1 = createDragLabel("label 1", this);
+//    lb1->move(10,10);
+//    QLabel *lb2 = createDragLabel("label 2", this);
+//    lb2->move(40,40);
+//    QLabel *lb3 = createDragLabel("label 3", this);
+//    lb3->move(70,70);
+//    lb1->show();
+//    lb2->show();
+//    lb3->show();
+    YIssueWidget *lb1 = createDragWidget (this);
     lb1->move(10,10);
-    QLabel *lb2 = createDragLabel("label 2", this);
-    lb2->move(40,40);
-    QLabel *lb3 = createDragLabel("label 3", this);
-    lb3->move(70,70);
+    YIssueWidget *lb2 = createDragWidget (this);
+    lb2->move(40,70);
+    YIssueWidget *lb3 = createDragWidget (this);
+    lb3->move(70,130);
     lb1->show();
     lb2->show();
     lb3->show();
-
     setAcceptDrops(true);
 }
 
@@ -62,12 +80,18 @@ YIssueListW2::dropEvent(QDropEvent *event)
         }
         qDebug() << "pieces" << piece.length() << piece;
 
-        QLabel *newLabel = createDragLabel(piece, this);
-        newLabel->move(position - hotSpot);
-        newLabel->show();
-        newLabel->setAttribute(Qt::WA_DeleteOnClose);
+//        QLabel *newLabel = createDragLabel(piece, this);
+//        newLabel->move(position - hotSpot);
+//        newLabel->show();
+//        newLabel->setAttribute(Qt::WA_DeleteOnClose);
+//        position += QPoint(newLabel->width(), 0);
+            YIssueWidget *newWidget = createDragWidget (this);
+            newWidget->move(position - hotSpot);
+            newWidget->show();
+            newWidget->setAttribute(Qt::WA_DeleteOnClose);
+            position += QPoint(newWidget->width(), 0);
 
-        position += QPoint(newLabel->width(), 0);
+            position += QPoint(newWidget->width(), 0);
 
         if (event->source() == this) {
             event->setDropAction(Qt::MoveAction);

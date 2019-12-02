@@ -4,6 +4,7 @@
 #include "../src/test/ymaintestwindow.h"
 #include "../src/test/yissuelistw.h"
 #include "../src/test/yissuelistw2.h"
+#include "../src/test/yissuewidget.h"
 
 #include <QtCore>
 #include <QApplication>
@@ -27,6 +28,9 @@ int main(int argc, char *argv[])
 
     YIssueListW *il = new YIssueListW();
     w.addTab(il);
+
+    YIssueWidget *iw = new YIssueWidget(1);
+    w.addTab(iw);
 
     w.show();
     return a.exec();
